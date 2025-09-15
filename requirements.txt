@@ -12,3 +12,4 @@ livekit-agents[bey]~=1.2
 sentence-transformers
 torch
 tqdm
+mangum
