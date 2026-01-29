@@ -11,8 +11,6 @@ from mcp_client.agent_tools import MCPToolsIntegration
 import os
 from tools import open_url
 from kb import get_kb_answer
-from livekit.plugins import tavus
-from livekit.plugins import bey
 load_dotenv()
 
 
@@ -57,20 +55,7 @@ async def entrypoint(ctx: agents.JobContext):
         agent_class=Assistant,
         mcp_servers=[mcp_server]
     )
-    # avatar = bey.AvatarSession(
-    #     avatar_id=os.environ.get("BEY_AVATAR_ID"),
-    #     api_key=os.environ.get("BEY_API_KEY"),
-    # )
-
-    # avatar = tavus.AvatarSession(
-    #     replica_id=os.environ.get("REPLICA_ID"),  
-    #     persona_id=os.environ.get("PERSONA_ID"),  
-    #     api_key=os.environ.get("TAVUS_API_KEY"),
-    # )
-
-    # # Start the avatar and wait for it to join
-    # await avatar.start(session, room=ctx.room)
-
+ 
     await session.start(
         room=ctx.room,
         agent=agent,

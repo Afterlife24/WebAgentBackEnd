@@ -1,15 +1,31 @@
+# LiveKit core SDK
+livekit-api
+
+# Agents and plugins
 livekit-agents
 livekit-plugins-google
 livekit-plugins-noise-cancellation
-requests
-python-dotenv
-pydantic-ai-slim[google,mcp]
-livekit-agents[tavus]~=1.0
-tzdata
+
+# Flask + async support
 flask[async]
 flask-cors
-livekit-agents[bey]~=1.2
+
+# Env and utils
+python-dotenv
+requests
+uuid
+
+# AI / ML
+pydantic-ai-slim[google,mcp]
 sentence-transformers
 torch
 tqdm
+
+# Timezone
+tzdata
+
+# MCP integration
+mcp-client
+
+# Serverless
 mangum
